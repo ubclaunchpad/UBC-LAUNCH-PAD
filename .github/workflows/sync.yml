@@ -1,4 +1,4 @@
-name: S3-synchronization-cronjob
+name: S3-to-github-synchronization-cronjob
 
 on:
   schedule:
@@ -55,3 +55,4 @@ jobs:
           gh pr create -B master -H ${{ env.SYNC_BRANCH_NAME }} --title 'Cronjob/Sync docs folder with s3' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
